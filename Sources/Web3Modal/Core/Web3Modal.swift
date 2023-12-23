@@ -29,17 +29,17 @@ public class Web3Modal {
             store: .shared
         )
         
-        if let session = client.getSessions().first {
-            Store.shared.session = session
-            
-            if let blockchain = session.accounts.first?.blockchain {
-                let matchingChain = ChainPresets.ethChains.first(where: {
-                    $0.chainNamespace == blockchain.namespace && $0.chainReference == blockchain.reference
-                })
-                
-                Store.shared.selectedChain = matchingChain
-            }
-        }
+//        if let session = client.getSessions().first {
+//            Store.shared.session = session
+//            
+//            if let blockchain = session.accounts.first?.blockchain {
+//                let matchingChain = ChainPresets.ethChains.first(where: {
+//                    $0.chainNamespace == blockchain.namespace && $0.chainReference == blockchain.reference
+//                })
+//                
+//                Store.shared.selectedChain = matchingChain
+//            }
+//        }
         
         return client
     }()
